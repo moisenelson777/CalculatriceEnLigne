@@ -7,6 +7,7 @@
 				<meta charset="UTF-8">
 				<title>Calculatrice en ligne</title>
 				<Link rel='stylesheet' type='text/css' href='style.css'/>
+				
 			</head>
 				<body>
 					<h1>CALCULATRICE EN LIGNE</h1>

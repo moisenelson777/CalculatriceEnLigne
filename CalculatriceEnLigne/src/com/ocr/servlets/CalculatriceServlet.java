@@ -38,19 +38,13 @@ public class CalculatriceServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		double nbre1 = 0;
-		double nbre2 = 0;
-		try {
-			 nbre1 = Double.parseDouble(request.getParameter("operande1"));
-		}catch(NumberFormatException e) {
-			
-		}
 		
-		try {
-			 nbre2 = Double.parseDouble(request.getParameter("operande2"));
-		}catch(NumberFormatException e) {
-			
-		}
+		String chaine1 = request.getParameter("operande1");
+		String chaine2 = request.getParameter("operande2");
+				
+		double nbre1 = (chaine1.isEmpty()?Integer.parseInt(chaine1):1);
+		double nbre2 = (chaine2.isEmpty()?Integer.parseInt(chaine2):1);
+	
 		//Operateur operateur = new Operateur(Double.parseDouble(request.getParameter("nbre1")), request.getParameter("operateur"), Double.parseDouble(request.getParameter("nbre2")));
 		Operateur operateur = new Operateur(nbre1, request.getParameter("operateur"), nbre2);
 		
